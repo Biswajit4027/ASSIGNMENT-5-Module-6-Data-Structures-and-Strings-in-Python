@@ -14,7 +14,7 @@ while True:
         name = input("Enter students name (KEY): ")
         marks = int(input("Enter marks obtained (VALUE): "))
         dictionery.update({name:marks})
-        con=input("Press any key to continue (q to quit) : ")
+        con=input("Press ENTER to continue ('q' to quit) : ")
         if con.lower()=='q':
             print("\n\n")
             break
@@ -30,11 +30,13 @@ print("\n")
 
 while True:
     n=input("Enter the name of the student to know the marks obtained: ")
+    print("\n")
     if dictionery.get(n):
         print(f"Marks obtained by {n} is : ",dictionery.get(n))
+        print("\n")
     else:
-        print("The student name is not in the database \n")
-    b=input("Press any key to continue (q to quit) : ")
+        print(f"The student name {n} is not in the database \n")
+    b=input("Press ENTER to continue ('q' to quit) : ")
     if b.lower()=='q':
          break
     else:
